@@ -177,6 +177,8 @@ The bot uses Telegram long-polling, so you don't need a server, webhook or open 
 
 MakeTheCut is a small, single-user, locally run Python app. A Telegram message handler drives a state machine. It calls focused "agent" modules, which call Mistral through one thin client, and results are persisted to plain files.
 
+Full documentation following the [arc42](https://arc42.org) template is in [`docs/arc42.md`](docs/arc42.md).
+
 ### System overview
 
 ```mermaid
