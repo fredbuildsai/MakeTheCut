@@ -335,3 +335,9 @@ Python · [python-telegram-bot](https://python-telegram-bot.org) · [Mistral AI]
 - `.env`, `profile/` and `applications/` are git-ignored. Keep it that way, especially if you make the repo public.
 - **Planned:** restricting the bot to the single Telegram account in `AUTHORIZED_USER_ID`. The setting is already read from `.env`, but access control is not implemented yet, so keep your bot's handle private for now.
 - `applications/conversations.csv` logs your messages locally. Delete it any time.
+
+---
+
+## License
+
+Released under the [MIT License](LICENSE).
