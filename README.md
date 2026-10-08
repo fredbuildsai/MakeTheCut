@@ -4,7 +4,18 @@
 
 MakeTheCut is a personal job-hunting assistant that lives in Telegram. Paste a job link, and in under a minute you get an honest, evidence-based fit score against *your* CV and *your* preferences. Only when a role is worth your time does it help you go further: researching the company, tailoring your CV, and drafting a cover letter in the language of the posting.
 
+> 🚧 **Work in progress.** MakeTheCut is under active development and may change or break. It is powered by AI (**[Mistral AI](https://mistral.ai) models and Mistral Agents**), so **no guarantees are made about the correctness, completeness or suitability of its scores, analyses, company research, tailored CVs or cover letters.** Always review the output yourself before relying on it or sending anything to an employer.
+
 > It never flatters you. A missing requirement is a gap, not a "maybe". Most real matches are partial, and an 85 has to be earned.
+
+### Powered by Mistral AI
+
+All the language work is done by Mistral:
+
+- **Mistral AI chat models** (default `mistral-medium-latest`, set with `MISTRAL_MODEL`) parse job postings, score the fit, rewrite your CV, write cover letters, power chat mode and answer `/ask`.
+- A **Mistral Agent** with built-in web search (set with `MISTRAL_AGENT_ID`) handles company research.
+
+Your CV, preferences and the job text are sent to Mistral's API to produce these results, so you need a Mistral account and API key and are subject to [Mistral's terms and privacy policy](https://mistral.ai/terms).
 
 ---
 
@@ -317,7 +328,8 @@ Python · [python-telegram-bot](https://python-telegram-bot.org) · [Mistral AI]
 
 ## Privacy & security
 
-- Your CV, preferences and analysis history stay on your machine, apart from the prompts sent to Mistral.
+- This project is a work in progress and AI-generated output can be wrong. Verify scores, facts and any generated documents before use.
+- Your CV, preferences and analysis history stay on your machine, apart from the content sent to Mistral AI in prompts.
 - `.env`, `profile/` and `applications/` are git-ignored. Keep it that way, especially if you make the repo public.
 - **Planned:** restricting the bot to the single Telegram account in `AUTHORIZED_USER_ID`. The setting is already read from `.env`, but access control is not implemented yet, so keep your bot's handle private for now.
 - `applications/conversations.csv` logs your messages locally. Delete it any time.
