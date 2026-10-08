@@ -75,7 +75,7 @@ The default threshold to unlock sharpen (CV + cover letter) is **70** (configura
 
 - **Python 3.10+** on macOS or Linux. The bundled launcher uses `.venv/bin/...` paths, so Windows users should create the venv manually.
 - A **Telegram bot token** from [@BotFather](https://t.me/botfather).
-- Your **Telegram user ID** from [@userinfobot](https://t.me/userinfobot).
+- Your **Telegram user ID** from [@userinfobot](https://t.me/userinfobot). It will be used for the planned access restriction.
 - A **Mistral API key** from [console.mistral.ai](https://console.mistral.ai).
 - *(Optional, for company research)* a **Mistral Agent** with the web-search tool enabled. Create one in Mistral AI Studio and copy its agent ID.
 - *(Optional, for emailing results)* a **[Resend](https://resend.com)** API key.
@@ -319,5 +319,5 @@ Python · [python-telegram-bot](https://python-telegram-bot.org) · [Mistral AI]
 
 - Your CV, preferences and analysis history stay on your machine, apart from the prompts sent to Mistral.
 - `.env`, `profile/` and `applications/` are git-ignored. Keep it that way, especially if you make the repo public.
-- **Known limitation:** `AUTHORIZED_USER_ID` is read from the config but the handlers don't yet check it, so anyone who finds your bot's username can talk to it. Keep the bot private and don't share its handle until this check is added.
+- **Planned:** restricting the bot to the single Telegram account in `AUTHORIZED_USER_ID`. The setting is already read from `.env`, but access control is not implemented yet, so keep your bot's handle private for now.
 - `applications/conversations.csv` logs your messages locally. Delete it any time.
